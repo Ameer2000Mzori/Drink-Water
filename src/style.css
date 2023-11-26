@@ -1,154 +1,98 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
 
 body {
-  font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-.header {
+  background-color: #3494e4;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  height: 1500px;
-  width: 100vw;
-  background-color: rgb(7, 123, 201);
+  margin-bottom: 40px;
 }
 
-.header .head-wrap {
-  height: 1200px;
+body h1 {
+  margin: 10px 0 0;
 }
 
-.header .head-wrap h1 {
-  color: white;
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.header .head-wrap p {
-  color: white;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.header .head-wrap .bottle-Wrap {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 40%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-}
-
-.header .head-wrap .bottle-Wrap .bottle {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: end;
-  height: 100%;
-  width: 35%;
-  background-color: white;
-  border-color: rgb(2, 19, 119);
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 0 0 35px 35px;
-  overflow: hidden;
-}
-
-.header .head-wrap .bottle-Wrap .bottle .bottle-No-Water {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  height: 25%;
-  width: 100%;
-}
-
-.header .head-wrap .bottle-Wrap .bottle .bottle-No-Water h5 {
-  padding: 0;
-  margin: 0;
-  color: rgb(23, 24, 24);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.header .head-wrap .bottle-Wrap .bottle .bottle-No-Water h5 br {
-  padding: 0;
-  margin: 0;
-}
-
-.header .head-wrap .bottle-Wrap .bottle .bottle-Water {
-  width: 100%;
-  height: 75%;
-  border-radius: 0 0 20px 20px;
-  background-color: rgb(0, 153, 255);
-}
-
-.header .head-wrap .bottle-Wrap .bottle .bottle-Water h5 {
-  color: aqua;
-  font-size: 50px;
+body h3 {
   font-weight: 400;
+  margin: 10px 0;
 }
 
-.header .head-wrap .glasses-Wrap {
+.cup {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
   display: flex;
-  text-align: center;
-  align-items: start;
-  justify-content: start;
-  height: 50%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.header .head-wrap .glasses-Wrap .glass-wrapper {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: start;
-  width: 25%;
-  height: 50%;
-  flex-wrap: wrap;
-}
-
-.header .head-wrap .glasses-Wrap .glass-wrapper .glass {
-  display: flex;
-  position: relative;
   flex-direction: column;
-  justify-content: end;
-  text-align: center;
-  align-items: center;
-  height: 90%;
-  width: 100%;
-  background-color: white;
-  border-color: rgb(2, 19, 119);
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 0 0 35px 35px;
   overflow: hidden;
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin: 5px;
+  transition: 0.3s ease;
 }
 
-.header .head-wrap .glasses-Wrap .glass-wrapper .glass .glass-Water {
-  width: 100%;
-  height: 100%;
-  border-radius: 0 0 20px 20px;
-  background-color: rgb(0, 153, 255);
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
 }
 
-.header .head-wrap .glasses-Wrap .glass-wrapper .glass h5 {
-  top: 15%;
-  position: absolute;
-  color: rgb(0, 0, 0);
-  font-weight: 300;
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.remained span {
   font-size: 20px;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 12px;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  height: 0;
+  transition: 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
 }
